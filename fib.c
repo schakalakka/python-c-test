@@ -5,7 +5,7 @@
 #include "fib.h"
 
 
-int fib_rec(int n){
+unsigned long int fib_rec(unsigned long int n) {
     if (n == 0) {
         return 0;
     }
@@ -17,7 +17,7 @@ int fib_rec(int n){
     }
 }
 
-int fib_it(unsigned long int n){
+unsigned long int fib_it(unsigned long int n) {
     unsigned long int first = 0;
     unsigned long int second = 1;
     unsigned long int temp;
@@ -25,7 +25,7 @@ int fib_it(unsigned long int n){
         return 0;
     }
     else {
-        for (int i = 0; i < n-1; i++){
+        for (long unsigned int i = 0; i < n - 1; i++) {
             temp = first;
             first = second;
             second  = temp + second;

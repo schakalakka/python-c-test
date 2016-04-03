@@ -10,3 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+unsigned long int fib_rec(unsigned long int n);
+
+unsigned long int fib_it(unsigned long int n);
+

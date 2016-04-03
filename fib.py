@@ -1,7 +1,8 @@
 import time
+
 import cyfib
 import cyfib_static
-
+import ext_fib
 
 
 def fib_rec(n):
@@ -28,43 +29,55 @@ def fib_it(n):
     return first
 
 
+def pure_python(n):
+    print("\n######Pure Python#########\n")
+    t0 = time.time()
+    fib_rec(n)
+    t1 = time.time()
+    fib_rec2(n)
+    t2 = time.time()
+    fib_it(n)
+    t3 = time.time()
+    print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1 - t0, t2 - t1, t3 - t2))
 
 
+def pure_cython(n):
+    print("\n######Cython#########\n")
+    t0 = time.time()
+    cyfib.fib_rec(n)
+    t1 = time.time()
+    cyfib.fib_rec2(n)
+    t2 = time.time()
+    cyfib.fib_it(n)
+    t3 = time.time()
+    print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1 - t0, t2 - t1, t3 - t2))
 
 
-
-foo = 39
-
-print("######Cython#########\n")
-
-t0 = time.time()
-print(cyfib.fib_rec(foo))
-t1 = time.time()
-print(cyfib.fib_rec2(foo))
-t2 = time.time()
-print(cyfib.fib_it(foo))
-t3 = time.time()
-print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1-t0, t2-t1, t3-t2))
+def static_cython(n):
+    print("\n######Static Cython#########\n")
+    t0 = time.time()
+    cyfib_static.fib_rec(n)
+    t1 = time.time()
+    cyfib_static.fib_rec2(n)
+    t2 = time.time()
+    cyfib_static.fib_it(n)
+    t3 = time.time()
+    print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1 - t0, t2 - t1, t3 - t2))
 
 
-print("######Static Cython#########\n")
+def c_api(n):
+    print("\n######C-API Python#########\n")
+    t0 = time.time()
+    ext_fib.fib_rec(n)
+    t1 = time.time()
+    ext_fib.fib_it(n)
+    t3 = time.time()
+    print('recursive: {}\niterative: {}'.format(t1 - t0, t3 - t1))
 
-t0 = time.time()
-print(cyfib_static.fib_rec(foo))
-t1 = time.time()
-print(cyfib_static.fib_rec2(foo))
-t2 = time.time()
-print(cyfib_static.fib_it(foo))
-t3 = time.time()
-print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1-t0, t2-t1, t3-t2))
 
-print("######Pure Python#########\n")
+foo = 45
 
-t0 = time.time()
-print(fib_rec(foo))
-t1 = time.time()
-print(fib_rec2(foo))
-t2 = time.time()
-print(fib_it(foo))
-t3 = time.time()
-print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1-t0, t2-t1, t3-t2))
+pure_python(foo)
+pure_cython(foo)
+static_cython(foo)
+c_api(foo)
