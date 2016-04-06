@@ -1,8 +1,7 @@
 import time
 
-import ext_fib
-
-import cyfib
+from capi import ext_fib
+from cython import cyfib
 
 
 def fib_rec(n):
@@ -65,6 +64,18 @@ def static_cython(n):
     print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1 - t0, t2 - t1, t3 - t2))
 
 
+def cdef_cython(n):
+    print("\n######cdef Cython#########\n")
+    t0 = time.time()
+    cyfib.fib_rec_cdef(n)
+    t1 = time.time()
+    cyfib.fib_rec2_cdef(n)
+    t2 = time.time()
+    cyfib.fib_it_cdef(n)
+    t3 = time.time()
+    print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1 - t0, t2 - t1, t3 - t2))
+
+
 def c_api(n):
     print("\n######C-API Python#########\n")
     t0 = time.time()
@@ -75,9 +86,10 @@ def c_api(n):
     print('recursive: {}\niterative: {}'.format(t1 - t0, t3 - t1))
 
 
-foo = 20
+foo = 38
 
 pure_python(foo)
 pure_cython(foo)
 static_cython(foo)
+cdef_cython(foo)
 c_api(foo)
