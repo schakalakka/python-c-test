@@ -86,3 +86,32 @@ cdef int fib_it_c(int n):
     for i in range(n):
         first, second = second, first + second
     return first
+
+######################
+#cpdef cython
+######################
+
+cpdef fib_rec_cpdef(int n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib_rec_cpdef(n - 1) + fib_rec_cpdef(n - 2)
+
+cpdef fib_rec2_cpdef(int n):
+    cdef int first, second
+    if n == 0:
+        return (0, 0)
+    elif n == 1:
+        return (0, 1)
+    else:
+        (first, second) = fib_rec2_cpdef(n - 1)
+        return (second, first + second)
+
+cpdef int fib_it_cpdef(int n):
+    cdef int first, second
+    first, second = 0, 1
+    for i in range(n):
+        first, second = second, first + second
+    return first

@@ -76,6 +76,18 @@ def cdef_cython(n):
     print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1 - t0, t2 - t1, t3 - t2))
 
 
+def cpdef_cython(n):
+    print("\n######cpdef Cython#########\n")
+    t0 = time.time()
+    cyfib.fib_rec_cpdef(n)
+    t1 = time.time()
+    cyfib.fib_rec2_cpdef(n)
+    t2 = time.time()
+    cyfib.fib_it_cpdef(n)
+    t3 = time.time()
+    print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1 - t0, t2 - t1, t3 - t2))
+
+
 def c_api(n):
     print("\n######C-API Python#########\n")
     t0 = time.time()
@@ -86,10 +98,11 @@ def c_api(n):
     print('recursive: {}\niterative: {}'.format(t1 - t0, t3 - t1))
 
 
-foo = 38
+foo = 42
 
-pure_python(foo)
+# pure_python(foo)
 pure_cython(foo)
 static_cython(foo)
 cdef_cython(foo)
+cpdef_cython(foo)
 c_api(foo)

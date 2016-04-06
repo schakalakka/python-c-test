@@ -605,6 +605,9 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 static int __pyx_f_5cyfib_fib_rec_c(int); /*proto*/
 static PyObject *__pyx_f_5cyfib_fib_rec2_c(int); /*proto*/
 static int __pyx_f_5cyfib_fib_it_c(int); /*proto*/
+static PyObject *__pyx_f_5cyfib_fib_rec_cpdef(int, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_5cyfib_fib_rec2_cpdef(int, int __pyx_skip_dispatch); /*proto*/
+static int __pyx_f_5cyfib_fib_it_cpdef(int, int __pyx_skip_dispatch); /*proto*/
 #define __Pyx_MODULE_NAME "cyfib"
 int __pyx_module_is_main_cyfib = 0;
 
@@ -655,6 +658,9 @@ static PyObject *__pyx_pf_5cyfib_10fib_it_static(CYTHON_UNUSED PyObject *__pyx_s
 static PyObject *__pyx_pf_5cyfib_12fib_rec_cdef(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_n); /* proto */
 static PyObject *__pyx_pf_5cyfib_14fib_rec2_cdef(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_n); /* proto */
 static PyObject *__pyx_pf_5cyfib_16fib_it_cdef(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_n); /* proto */
+static PyObject *__pyx_pf_5cyfib_18fib_rec_cpdef(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_n); /* proto */
+static PyObject *__pyx_pf_5cyfib_20fib_rec2_cpdef(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_n); /* proto */
+static PyObject *__pyx_pf_5cyfib_22fib_it_cpdef(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_n); /* proto */
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_2;
@@ -665,6 +671,7 @@ static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_tuple__6;
 static PyObject *__pyx_tuple__7;
+static PyObject *__pyx_tuple__8;
 static PyObject *__pyx_tuple__9;
 static PyObject *__pyx_tuple__11;
 static PyObject *__pyx_tuple__13;
@@ -673,7 +680,7 @@ static PyObject *__pyx_tuple__17;
 static PyObject *__pyx_tuple__19;
 static PyObject *__pyx_tuple__21;
 static PyObject *__pyx_tuple__23;
-static PyObject *__pyx_codeobj__8;
+static PyObject *__pyx_tuple__25;
 static PyObject *__pyx_codeobj__10;
 static PyObject *__pyx_codeobj__12;
 static PyObject *__pyx_codeobj__14;
@@ -682,6 +689,7 @@ static PyObject *__pyx_codeobj__18;
 static PyObject *__pyx_codeobj__20;
 static PyObject *__pyx_codeobj__22;
 static PyObject *__pyx_codeobj__24;
+static PyObject *__pyx_codeobj__26;
 
 /* "cyfib.pyx":2
  * #cython
@@ -1279,7 +1287,7 @@ static PyObject *__pyx_pf_5cyfib_4fib_it(CYTHON_UNUSED PyObject *__pyx_self, PyO
  *         first, second = second, first + second
  *     return first             # <<<<<<<<<<<<<<
  * 
- * 
+ * #static cython
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_first);
@@ -1310,7 +1318,7 @@ static PyObject *__pyx_pf_5cyfib_4fib_it(CYTHON_UNUSED PyObject *__pyx_self, PyO
   return __pyx_r;
 }
 
-/* "cyfib.pyx":28
+/* "cyfib.pyx":27
  * #static cython
  * 
  * def fib_rec_static(int n):             # <<<<<<<<<<<<<<
@@ -1330,7 +1338,7 @@ static PyObject *__pyx_pw_5cyfib_7fib_rec_static(PyObject *__pyx_self, PyObject 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("fib_rec_static (wrapper)", 0);
   assert(__pyx_arg_n); {
-    __pyx_v_n = __Pyx_PyInt_As_int(__pyx_arg_n); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_n = __Pyx_PyInt_As_int(__pyx_arg_n); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -1359,7 +1367,7 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fib_rec_static", 0);
 
-  /* "cyfib.pyx":29
+  /* "cyfib.pyx":28
  * 
  * def fib_rec_static(int n):
  *     if n == 0:             # <<<<<<<<<<<<<<
@@ -1369,7 +1377,7 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
   switch (__pyx_v_n) {
     case 0:
 
-    /* "cyfib.pyx":30
+    /* "cyfib.pyx":29
  * def fib_rec_static(int n):
  *     if n == 0:
  *         return 0             # <<<<<<<<<<<<<<
@@ -1381,7 +1389,7 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
     __pyx_r = __pyx_int_0;
     goto __pyx_L0;
 
-    /* "cyfib.pyx":29
+    /* "cyfib.pyx":28
  * 
  * def fib_rec_static(int n):
  *     if n == 0:             # <<<<<<<<<<<<<<
@@ -1390,7 +1398,7 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
  */
     break;
 
-    /* "cyfib.pyx":31
+    /* "cyfib.pyx":30
  *     if n == 0:
  *         return 0
  *     elif n == 1:             # <<<<<<<<<<<<<<
@@ -1399,7 +1407,7 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
  */
     case 1:
 
-    /* "cyfib.pyx":32
+    /* "cyfib.pyx":31
  *         return 0
  *     elif n == 1:
  *         return 1             # <<<<<<<<<<<<<<
@@ -1411,7 +1419,7 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
     __pyx_r = __pyx_int_1;
     goto __pyx_L0;
 
-    /* "cyfib.pyx":31
+    /* "cyfib.pyx":30
  *     if n == 0:
  *         return 0
  *     elif n == 1:             # <<<<<<<<<<<<<<
@@ -1421,7 +1429,7 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
     break;
     default:
 
-    /* "cyfib.pyx":34
+    /* "cyfib.pyx":33
  *         return 1
  *     else:
  *         return fib_rec_static(n - 1) + fib_rec_static(n - 2)             # <<<<<<<<<<<<<<
@@ -1429,9 +1437,9 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
  * def fib_rec2_static(int n):
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_fib_rec_static); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_fib_rec_static); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_n - 1)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_n - 1)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -1444,24 +1452,24 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
       }
     }
     if (!__pyx_t_4) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_3);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
       __pyx_t_3 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_fib_rec_static); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_fib_rec_static); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_n - 2)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_n - 2)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_5))) {
@@ -1474,22 +1482,22 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
       }
     }
     if (!__pyx_t_4) {
-      __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_2);
     } else {
-      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_3);
       PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_3);
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 34; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -1499,7 +1507,7 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
     break;
   }
 
-  /* "cyfib.pyx":28
+  /* "cyfib.pyx":27
  * #static cython
  * 
  * def fib_rec_static(int n):             # <<<<<<<<<<<<<<
@@ -1523,7 +1531,7 @@ static PyObject *__pyx_pf_5cyfib_6fib_rec_static(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "cyfib.pyx":36
+/* "cyfib.pyx":35
  *         return fib_rec_static(n - 1) + fib_rec_static(n - 2)
  * 
  * def fib_rec2_static(int n):             # <<<<<<<<<<<<<<
@@ -1543,7 +1551,7 @@ static PyObject *__pyx_pw_5cyfib_9fib_rec2_static(PyObject *__pyx_self, PyObject
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("fib_rec2_static (wrapper)", 0);
   assert(__pyx_arg_n); {
-    __pyx_v_n = __Pyx_PyInt_As_int(__pyx_arg_n); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_n = __Pyx_PyInt_As_int(__pyx_arg_n); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -1576,7 +1584,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fib_rec2_static", 0);
 
-  /* "cyfib.pyx":38
+  /* "cyfib.pyx":37
  * def fib_rec2_static(int n):
  *     cdef int first, second
  *     if n == 0:             # <<<<<<<<<<<<<<
@@ -1586,7 +1594,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
   switch (__pyx_v_n) {
     case 0:
 
-    /* "cyfib.pyx":39
+    /* "cyfib.pyx":38
  *     cdef int first, second
  *     if n == 0:
  *         return (0, 0)             # <<<<<<<<<<<<<<
@@ -1598,7 +1606,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
     __pyx_r = __pyx_tuple__3;
     goto __pyx_L0;
 
-    /* "cyfib.pyx":38
+    /* "cyfib.pyx":37
  * def fib_rec2_static(int n):
  *     cdef int first, second
  *     if n == 0:             # <<<<<<<<<<<<<<
@@ -1607,7 +1615,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
  */
     break;
 
-    /* "cyfib.pyx":40
+    /* "cyfib.pyx":39
  *     if n == 0:
  *         return (0, 0)
  *     elif n == 1:             # <<<<<<<<<<<<<<
@@ -1616,7 +1624,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
  */
     case 1:
 
-    /* "cyfib.pyx":41
+    /* "cyfib.pyx":40
  *         return (0, 0)
  *     elif n == 1:
  *         return (0, 1)             # <<<<<<<<<<<<<<
@@ -1628,7 +1636,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
     __pyx_r = __pyx_tuple__4;
     goto __pyx_L0;
 
-    /* "cyfib.pyx":40
+    /* "cyfib.pyx":39
  *     if n == 0:
  *         return (0, 0)
  *     elif n == 1:             # <<<<<<<<<<<<<<
@@ -1638,16 +1646,16 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
     break;
     default:
 
-    /* "cyfib.pyx":43
+    /* "cyfib.pyx":42
  *         return (0, 1)
  *     else:
  *         (first, second) = fib_rec2_static(n - 1)             # <<<<<<<<<<<<<<
  *         return (second, first + second)
  * 
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_fib_rec2_static); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_fib_rec2_static); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_n - 1)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_n - 1)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -1660,17 +1668,17 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
       }
     }
     if (!__pyx_t_4) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_3);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
       __pyx_t_3 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -1685,7 +1693,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       #if CYTHON_COMPILING_IN_CPYTHON
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -1698,15 +1706,15 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_t_5);
       #else
-      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_5 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       #endif
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_6 = Py_TYPE(__pyx_t_3)->tp_iternext;
@@ -1714,7 +1722,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_GOTREF(__pyx_t_2);
       index = 1; __pyx_t_5 = __pyx_t_6(__pyx_t_3); if (unlikely(!__pyx_t_5)) goto __pyx_L3_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_5);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_3), 2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_3), 2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_t_6 = NULL;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       goto __pyx_L4_unpacking_done;
@@ -1722,17 +1730,17 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_6 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_L4_unpacking_done:;
     }
-    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_5); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_5); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_first = __pyx_t_7;
     __pyx_v_second = __pyx_t_8;
 
-    /* "cyfib.pyx":44
+    /* "cyfib.pyx":43
  *     else:
  *         (first, second) = fib_rec2_static(n - 1)
  *         return (second, first + second)             # <<<<<<<<<<<<<<
@@ -1740,11 +1748,11 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
  * def fib_it_static(int n):
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_second); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_second); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = __Pyx_PyInt_From_int((__pyx_v_first + __pyx_v_second)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = __Pyx_PyInt_From_int((__pyx_v_first + __pyx_v_second)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 44; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -1758,7 +1766,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
     break;
   }
 
-  /* "cyfib.pyx":36
+  /* "cyfib.pyx":35
  *         return fib_rec_static(n - 1) + fib_rec_static(n - 2)
  * 
  * def fib_rec2_static(int n):             # <<<<<<<<<<<<<<
@@ -1781,7 +1789,7 @@ static PyObject *__pyx_pf_5cyfib_8fib_rec2_static(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "cyfib.pyx":46
+/* "cyfib.pyx":45
  *         return (second, first + second)
  * 
  * def fib_it_static(int n):             # <<<<<<<<<<<<<<
@@ -1801,7 +1809,7 @@ static PyObject *__pyx_pw_5cyfib_11fib_it_static(PyObject *__pyx_self, PyObject 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("fib_it_static (wrapper)", 0);
   assert(__pyx_arg_n); {
-    __pyx_v_n = __Pyx_PyInt_As_int(__pyx_arg_n); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_n = __Pyx_PyInt_As_int(__pyx_arg_n); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -1832,7 +1840,7 @@ static PyObject *__pyx_pf_5cyfib_10fib_it_static(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fib_it_static", 0);
 
-  /* "cyfib.pyx":48
+  /* "cyfib.pyx":47
  * def fib_it_static(int n):
  *     cdef int first, second
  *     first, second = 0, 1             # <<<<<<<<<<<<<<
@@ -1844,7 +1852,7 @@ static PyObject *__pyx_pf_5cyfib_10fib_it_static(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_v_first = __pyx_t_1;
   __pyx_v_second = __pyx_t_2;
 
-  /* "cyfib.pyx":49
+  /* "cyfib.pyx":48
  *     cdef int first, second
  *     first, second = 0, 1
  *     for i in range(n):             # <<<<<<<<<<<<<<
@@ -1855,7 +1863,7 @@ static PyObject *__pyx_pf_5cyfib_10fib_it_static(CYTHON_UNUSED PyObject *__pyx_s
   for (__pyx_t_1 = 0; __pyx_t_1 < __pyx_t_2; __pyx_t_1+=1) {
     __pyx_v_i = __pyx_t_1;
 
-    /* "cyfib.pyx":50
+    /* "cyfib.pyx":49
  *     first, second = 0, 1
  *     for i in range(n):
  *         first, second = second, first + second             # <<<<<<<<<<<<<<
@@ -1868,7 +1876,7 @@ static PyObject *__pyx_pf_5cyfib_10fib_it_static(CYTHON_UNUSED PyObject *__pyx_s
     __pyx_v_second = __pyx_t_4;
   }
 
-  /* "cyfib.pyx":51
+  /* "cyfib.pyx":50
  *     for i in range(n):
  *         first, second = second, first + second
  *     return first             # <<<<<<<<<<<<<<
@@ -1876,13 +1884,13 @@ static PyObject *__pyx_pf_5cyfib_10fib_it_static(CYTHON_UNUSED PyObject *__pyx_s
  * ######################
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_first); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_first); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_r = __pyx_t_5;
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "cyfib.pyx":46
+  /* "cyfib.pyx":45
  *         return (second, first + second)
  * 
  * def fib_it_static(int n):             # <<<<<<<<<<<<<<
@@ -1901,7 +1909,7 @@ static PyObject *__pyx_pf_5cyfib_10fib_it_static(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "cyfib.pyx":57
+/* "cyfib.pyx":56
  * ######################
  * 
  * def fib_rec_cdef(n):             # <<<<<<<<<<<<<<
@@ -1933,7 +1941,7 @@ static PyObject *__pyx_pf_5cyfib_12fib_rec_cdef(CYTHON_UNUSED PyObject *__pyx_se
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fib_rec_cdef", 0);
 
-  /* "cyfib.pyx":58
+  /* "cyfib.pyx":57
  * 
  * def fib_rec_cdef(n):
  *     return fib_rec_c(n)             # <<<<<<<<<<<<<<
@@ -1941,14 +1949,14 @@ static PyObject *__pyx_pf_5cyfib_12fib_rec_cdef(CYTHON_UNUSED PyObject *__pyx_se
  * def fib_rec2_cdef(n):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_n); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_f_5cyfib_fib_rec_c(__pyx_t_1)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_n); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_f_5cyfib_fib_rec_c(__pyx_t_1)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "cyfib.pyx":57
+  /* "cyfib.pyx":56
  * ######################
  * 
  * def fib_rec_cdef(n):             # <<<<<<<<<<<<<<
@@ -1967,7 +1975,7 @@ static PyObject *__pyx_pf_5cyfib_12fib_rec_cdef(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "cyfib.pyx":60
+/* "cyfib.pyx":59
  *     return fib_rec_c(n)
  * 
  * def fib_rec2_cdef(n):             # <<<<<<<<<<<<<<
@@ -1999,7 +2007,7 @@ static PyObject *__pyx_pf_5cyfib_14fib_rec2_cdef(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fib_rec2_cdef", 0);
 
-  /* "cyfib.pyx":61
+  /* "cyfib.pyx":60
  * 
  * def fib_rec2_cdef(n):
  *     return fib_rec2_c(n)             # <<<<<<<<<<<<<<
@@ -2007,14 +2015,14 @@ static PyObject *__pyx_pf_5cyfib_14fib_rec2_cdef(CYTHON_UNUSED PyObject *__pyx_s
  * def fib_it_cdef(n):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_n); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_2 = __pyx_f_5cyfib_fib_rec2_c(__pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_n); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __pyx_f_5cyfib_fib_rec2_c(__pyx_t_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "cyfib.pyx":60
+  /* "cyfib.pyx":59
  *     return fib_rec_c(n)
  * 
  * def fib_rec2_cdef(n):             # <<<<<<<<<<<<<<
@@ -2033,7 +2041,7 @@ static PyObject *__pyx_pf_5cyfib_14fib_rec2_cdef(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "cyfib.pyx":63
+/* "cyfib.pyx":62
  *     return fib_rec2_c(n)
  * 
  * def fib_it_cdef(n):             # <<<<<<<<<<<<<<
@@ -2065,7 +2073,7 @@ static PyObject *__pyx_pf_5cyfib_16fib_it_cdef(CYTHON_UNUSED PyObject *__pyx_sel
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fib_it_cdef", 0);
 
-  /* "cyfib.pyx":64
+  /* "cyfib.pyx":63
  * 
  * def fib_it_cdef(n):
  *     return fib_it_c(n)             # <<<<<<<<<<<<<<
@@ -2073,14 +2081,14 @@ static PyObject *__pyx_pf_5cyfib_16fib_it_cdef(CYTHON_UNUSED PyObject *__pyx_sel
  * cdef int fib_rec_c(int n):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_n); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_f_5cyfib_fib_it_c(__pyx_t_1)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_n); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_f_5cyfib_fib_it_c(__pyx_t_1)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "cyfib.pyx":63
+  /* "cyfib.pyx":62
  *     return fib_rec2_c(n)
  * 
  * def fib_it_cdef(n):             # <<<<<<<<<<<<<<
@@ -2099,7 +2107,7 @@ static PyObject *__pyx_pf_5cyfib_16fib_it_cdef(CYTHON_UNUSED PyObject *__pyx_sel
   return __pyx_r;
 }
 
-/* "cyfib.pyx":66
+/* "cyfib.pyx":65
  *     return fib_it_c(n)
  * 
  * cdef int fib_rec_c(int n):             # <<<<<<<<<<<<<<
@@ -2112,7 +2120,7 @@ static int __pyx_f_5cyfib_fib_rec_c(int __pyx_v_n) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("fib_rec_c", 0);
 
-  /* "cyfib.pyx":67
+  /* "cyfib.pyx":66
  * 
  * cdef int fib_rec_c(int n):
  *     if n == 0:             # <<<<<<<<<<<<<<
@@ -2122,7 +2130,7 @@ static int __pyx_f_5cyfib_fib_rec_c(int __pyx_v_n) {
   switch (__pyx_v_n) {
     case 0:
 
-    /* "cyfib.pyx":68
+    /* "cyfib.pyx":67
  * cdef int fib_rec_c(int n):
  *     if n == 0:
  *         return 0             # <<<<<<<<<<<<<<
@@ -2132,7 +2140,7 @@ static int __pyx_f_5cyfib_fib_rec_c(int __pyx_v_n) {
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "cyfib.pyx":67
+    /* "cyfib.pyx":66
  * 
  * cdef int fib_rec_c(int n):
  *     if n == 0:             # <<<<<<<<<<<<<<
@@ -2141,7 +2149,7 @@ static int __pyx_f_5cyfib_fib_rec_c(int __pyx_v_n) {
  */
     break;
 
-    /* "cyfib.pyx":69
+    /* "cyfib.pyx":68
  *     if n == 0:
  *         return 0
  *     elif n == 1:             # <<<<<<<<<<<<<<
@@ -2150,7 +2158,7 @@ static int __pyx_f_5cyfib_fib_rec_c(int __pyx_v_n) {
  */
     case 1:
 
-    /* "cyfib.pyx":70
+    /* "cyfib.pyx":69
  *         return 0
  *     elif n == 1:
  *         return 1             # <<<<<<<<<<<<<<
@@ -2160,7 +2168,7 @@ static int __pyx_f_5cyfib_fib_rec_c(int __pyx_v_n) {
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "cyfib.pyx":69
+    /* "cyfib.pyx":68
  *     if n == 0:
  *         return 0
  *     elif n == 1:             # <<<<<<<<<<<<<<
@@ -2170,7 +2178,7 @@ static int __pyx_f_5cyfib_fib_rec_c(int __pyx_v_n) {
     break;
     default:
 
-    /* "cyfib.pyx":72
+    /* "cyfib.pyx":71
  *         return 1
  *     else:
  *         return fib_rec_c(n - 1) + fib_rec_c(n - 2)             # <<<<<<<<<<<<<<
@@ -2182,7 +2190,7 @@ static int __pyx_f_5cyfib_fib_rec_c(int __pyx_v_n) {
     break;
   }
 
-  /* "cyfib.pyx":66
+  /* "cyfib.pyx":65
  *     return fib_it_c(n)
  * 
  * cdef int fib_rec_c(int n):             # <<<<<<<<<<<<<<
@@ -2196,7 +2204,7 @@ static int __pyx_f_5cyfib_fib_rec_c(int __pyx_v_n) {
   return __pyx_r;
 }
 
-/* "cyfib.pyx":74
+/* "cyfib.pyx":73
  *         return fib_rec_c(n - 1) + fib_rec_c(n - 2)
  * 
  * cdef fib_rec2_c(int n):             # <<<<<<<<<<<<<<
@@ -2221,7 +2229,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fib_rec2_c", 0);
 
-  /* "cyfib.pyx":76
+  /* "cyfib.pyx":75
  * cdef fib_rec2_c(int n):
  *     cdef int first, second
  *     if n == 0:             # <<<<<<<<<<<<<<
@@ -2231,7 +2239,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
   switch (__pyx_v_n) {
     case 0:
 
-    /* "cyfib.pyx":77
+    /* "cyfib.pyx":76
  *     cdef int first, second
  *     if n == 0:
  *         return (0, 0)             # <<<<<<<<<<<<<<
@@ -2243,7 +2251,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
     __pyx_r = __pyx_tuple__5;
     goto __pyx_L0;
 
-    /* "cyfib.pyx":76
+    /* "cyfib.pyx":75
  * cdef fib_rec2_c(int n):
  *     cdef int first, second
  *     if n == 0:             # <<<<<<<<<<<<<<
@@ -2252,7 +2260,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
  */
     break;
 
-    /* "cyfib.pyx":78
+    /* "cyfib.pyx":77
  *     if n == 0:
  *         return (0, 0)
  *     elif n == 1:             # <<<<<<<<<<<<<<
@@ -2261,7 +2269,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
  */
     case 1:
 
-    /* "cyfib.pyx":79
+    /* "cyfib.pyx":78
  *         return (0, 0)
  *     elif n == 1:
  *         return (0, 1)             # <<<<<<<<<<<<<<
@@ -2273,7 +2281,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
     __pyx_r = __pyx_tuple__6;
     goto __pyx_L0;
 
-    /* "cyfib.pyx":78
+    /* "cyfib.pyx":77
  *     if n == 0:
  *         return (0, 0)
  *     elif n == 1:             # <<<<<<<<<<<<<<
@@ -2283,14 +2291,14 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
     break;
     default:
 
-    /* "cyfib.pyx":81
+    /* "cyfib.pyx":80
  *         return (0, 1)
  *     else:
  *         (first, second) = fib_rec2_c(n - 1)             # <<<<<<<<<<<<<<
  *         return (second, first + second)
  * 
  */
-    __pyx_t_1 = __pyx_f_5cyfib_fib_rec2_c((__pyx_v_n - 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __pyx_f_5cyfib_fib_rec2_c((__pyx_v_n - 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if ((likely(PyTuple_CheckExact(__pyx_t_1))) || (PyList_CheckExact(__pyx_t_1))) {
       PyObject* sequence = __pyx_t_1;
@@ -2302,7 +2310,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       #if CYTHON_COMPILING_IN_CPYTHON
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -2315,15 +2323,15 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
       __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_t_3);
       #else
-      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       #endif
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext;
@@ -2331,7 +2339,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
       __Pyx_GOTREF(__pyx_t_2);
       index = 1; __pyx_t_3 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_3)) goto __pyx_L3_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_3);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_t_5 = NULL;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       goto __pyx_L4_unpacking_done;
@@ -2339,17 +2347,17 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_5 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __pyx_L4_unpacking_done:;
     }
-    __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_3); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_3); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_first = __pyx_t_6;
     __pyx_v_second = __pyx_t_7;
 
-    /* "cyfib.pyx":82
+    /* "cyfib.pyx":81
  *     else:
  *         (first, second) = fib_rec2_c(n - 1)
  *         return (second, first + second)             # <<<<<<<<<<<<<<
@@ -2357,11 +2365,11 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
  * cdef int fib_it_c(int n):
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_second); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_second); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyInt_From_int((__pyx_v_first + __pyx_v_second)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyInt_From_int((__pyx_v_first + __pyx_v_second)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -2375,7 +2383,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
     break;
   }
 
-  /* "cyfib.pyx":74
+  /* "cyfib.pyx":73
  *         return fib_rec_c(n - 1) + fib_rec_c(n - 2)
  * 
  * cdef fib_rec2_c(int n):             # <<<<<<<<<<<<<<
@@ -2397,7 +2405,7 @@ static PyObject *__pyx_f_5cyfib_fib_rec2_c(int __pyx_v_n) {
   return __pyx_r;
 }
 
-/* "cyfib.pyx":84
+/* "cyfib.pyx":83
  *         return (second, first + second)
  * 
  * cdef int fib_it_c(int n):             # <<<<<<<<<<<<<<
@@ -2417,7 +2425,7 @@ static int __pyx_f_5cyfib_fib_it_c(int __pyx_v_n) {
   int __pyx_t_4;
   __Pyx_RefNannySetupContext("fib_it_c", 0);
 
-  /* "cyfib.pyx":86
+  /* "cyfib.pyx":85
  * cdef int fib_it_c(int n):
  *     cdef int first, second
  *     first, second = 0, 1             # <<<<<<<<<<<<<<
@@ -2429,7 +2437,7 @@ static int __pyx_f_5cyfib_fib_it_c(int __pyx_v_n) {
   __pyx_v_first = __pyx_t_1;
   __pyx_v_second = __pyx_t_2;
 
-  /* "cyfib.pyx":87
+  /* "cyfib.pyx":86
  *     cdef int first, second
  *     first, second = 0, 1
  *     for i in range(n):             # <<<<<<<<<<<<<<
@@ -2440,11 +2448,12 @@ static int __pyx_f_5cyfib_fib_it_c(int __pyx_v_n) {
   for (__pyx_t_1 = 0; __pyx_t_1 < __pyx_t_2; __pyx_t_1+=1) {
     __pyx_v_i = __pyx_t_1;
 
-    /* "cyfib.pyx":88
+    /* "cyfib.pyx":87
  *     first, second = 0, 1
  *     for i in range(n):
  *         first, second = second, first + second             # <<<<<<<<<<<<<<
  *     return first
+ * 
  */
     __pyx_t_3 = __pyx_v_second;
     __pyx_t_4 = (__pyx_v_first + __pyx_v_second);
@@ -2452,15 +2461,17 @@ static int __pyx_f_5cyfib_fib_it_c(int __pyx_v_n) {
     __pyx_v_second = __pyx_t_4;
   }
 
-  /* "cyfib.pyx":89
+  /* "cyfib.pyx":88
  *     for i in range(n):
  *         first, second = second, first + second
  *     return first             # <<<<<<<<<<<<<<
+ * 
+ * 
  */
   __pyx_r = __pyx_v_first;
   goto __pyx_L0;
 
-  /* "cyfib.pyx":84
+  /* "cyfib.pyx":83
  *         return (second, first + second)
  * 
  * cdef int fib_it_c(int n):             # <<<<<<<<<<<<<<
@@ -2474,7 +2485,571 @@ static int __pyx_f_5cyfib_fib_it_c(int __pyx_v_n) {
   return __pyx_r;
 }
 
+/* "cyfib.pyx":95
+ * ######################
+ * 
+ * cpdef fib_rec_cpdef(int n):             # <<<<<<<<<<<<<<
+ *     if n == 0:
+ *         return 0
+ */
+
+static PyObject *__pyx_pw_5cyfib_19fib_rec_cpdef(PyObject *__pyx_self, PyObject *__pyx_arg_n); /*proto*/
+static PyObject *__pyx_f_5cyfib_fib_rec_cpdef(int __pyx_v_n, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("fib_rec_cpdef", 0);
+
+  /* "cyfib.pyx":96
+ * 
+ * cpdef fib_rec_cpdef(int n):
+ *     if n == 0:             # <<<<<<<<<<<<<<
+ *         return 0
+ *     elif n == 1:
+ */
+  switch (__pyx_v_n) {
+    case 0:
+
+    /* "cyfib.pyx":97
+ * cpdef fib_rec_cpdef(int n):
+ *     if n == 0:
+ *         return 0             # <<<<<<<<<<<<<<
+ *     elif n == 1:
+ *         return 1
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __Pyx_INCREF(__pyx_int_0);
+    __pyx_r = __pyx_int_0;
+    goto __pyx_L0;
+
+    /* "cyfib.pyx":96
+ * 
+ * cpdef fib_rec_cpdef(int n):
+ *     if n == 0:             # <<<<<<<<<<<<<<
+ *         return 0
+ *     elif n == 1:
+ */
+    break;
+
+    /* "cyfib.pyx":98
+ *     if n == 0:
+ *         return 0
+ *     elif n == 1:             # <<<<<<<<<<<<<<
+ *         return 1
+ *     else:
+ */
+    case 1:
+
+    /* "cyfib.pyx":99
+ *         return 0
+ *     elif n == 1:
+ *         return 1             # <<<<<<<<<<<<<<
+ *     else:
+ *         return fib_rec_cpdef(n - 1) + fib_rec_cpdef(n - 2)
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __Pyx_INCREF(__pyx_int_1);
+    __pyx_r = __pyx_int_1;
+    goto __pyx_L0;
+
+    /* "cyfib.pyx":98
+ *     if n == 0:
+ *         return 0
+ *     elif n == 1:             # <<<<<<<<<<<<<<
+ *         return 1
+ *     else:
+ */
+    break;
+    default:
+
+    /* "cyfib.pyx":101
+ *         return 1
+ *     else:
+ *         return fib_rec_cpdef(n - 1) + fib_rec_cpdef(n - 2)             # <<<<<<<<<<<<<<
+ * 
+ * cpdef fib_rec2_cpdef(int n):
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __pyx_t_1 = __pyx_f_5cyfib_fib_rec_cpdef((__pyx_v_n - 1), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_2 = __pyx_f_5cyfib_fib_rec_cpdef((__pyx_v_n - 2), 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 101; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_r = __pyx_t_3;
+    __pyx_t_3 = 0;
+    goto __pyx_L0;
+    break;
+  }
+
+  /* "cyfib.pyx":95
+ * ######################
+ * 
+ * cpdef fib_rec_cpdef(int n):             # <<<<<<<<<<<<<<
+ *     if n == 0:
+ *         return 0
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_AddTraceback("cyfib.fib_rec_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_5cyfib_19fib_rec_cpdef(PyObject *__pyx_self, PyObject *__pyx_arg_n); /*proto*/
+static PyObject *__pyx_pw_5cyfib_19fib_rec_cpdef(PyObject *__pyx_self, PyObject *__pyx_arg_n) {
+  int __pyx_v_n;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("fib_rec_cpdef (wrapper)", 0);
+  assert(__pyx_arg_n); {
+    __pyx_v_n = __Pyx_PyInt_As_int(__pyx_arg_n); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("cyfib.fib_rec_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_5cyfib_18fib_rec_cpdef(__pyx_self, ((int)__pyx_v_n));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_5cyfib_18fib_rec_cpdef(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_n) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("fib_rec_cpdef", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_5cyfib_fib_rec_cpdef(__pyx_v_n, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("cyfib.fib_rec_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "cyfib.pyx":103
+ *         return fib_rec_cpdef(n - 1) + fib_rec_cpdef(n - 2)
+ * 
+ * cpdef fib_rec2_cpdef(int n):             # <<<<<<<<<<<<<<
+ *     cdef int first, second
+ *     if n == 0:
+ */
+
+static PyObject *__pyx_pw_5cyfib_21fib_rec2_cpdef(PyObject *__pyx_self, PyObject *__pyx_arg_n); /*proto*/
+static PyObject *__pyx_f_5cyfib_fib_rec2_cpdef(int __pyx_v_n, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  int __pyx_v_first;
+  int __pyx_v_second;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *(*__pyx_t_5)(PyObject *);
+  int __pyx_t_6;
+  int __pyx_t_7;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("fib_rec2_cpdef", 0);
+
+  /* "cyfib.pyx":105
+ * cpdef fib_rec2_cpdef(int n):
+ *     cdef int first, second
+ *     if n == 0:             # <<<<<<<<<<<<<<
+ *         return (0, 0)
+ *     elif n == 1:
+ */
+  switch (__pyx_v_n) {
+    case 0:
+
+    /* "cyfib.pyx":106
+ *     cdef int first, second
+ *     if n == 0:
+ *         return (0, 0)             # <<<<<<<<<<<<<<
+ *     elif n == 1:
+ *         return (0, 1)
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __Pyx_INCREF(__pyx_tuple__7);
+    __pyx_r = __pyx_tuple__7;
+    goto __pyx_L0;
+
+    /* "cyfib.pyx":105
+ * cpdef fib_rec2_cpdef(int n):
+ *     cdef int first, second
+ *     if n == 0:             # <<<<<<<<<<<<<<
+ *         return (0, 0)
+ *     elif n == 1:
+ */
+    break;
+
+    /* "cyfib.pyx":107
+ *     if n == 0:
+ *         return (0, 0)
+ *     elif n == 1:             # <<<<<<<<<<<<<<
+ *         return (0, 1)
+ *     else:
+ */
+    case 1:
+
+    /* "cyfib.pyx":108
+ *         return (0, 0)
+ *     elif n == 1:
+ *         return (0, 1)             # <<<<<<<<<<<<<<
+ *     else:
+ *         (first, second) = fib_rec2_cpdef(n - 1)
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __Pyx_INCREF(__pyx_tuple__8);
+    __pyx_r = __pyx_tuple__8;
+    goto __pyx_L0;
+
+    /* "cyfib.pyx":107
+ *     if n == 0:
+ *         return (0, 0)
+ *     elif n == 1:             # <<<<<<<<<<<<<<
+ *         return (0, 1)
+ *     else:
+ */
+    break;
+    default:
+
+    /* "cyfib.pyx":110
+ *         return (0, 1)
+ *     else:
+ *         (first, second) = fib_rec2_cpdef(n - 1)             # <<<<<<<<<<<<<<
+ *         return (second, first + second)
+ * 
+ */
+    __pyx_t_1 = __pyx_f_5cyfib_fib_rec2_cpdef((__pyx_v_n - 1), 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    if ((likely(PyTuple_CheckExact(__pyx_t_1))) || (PyList_CheckExact(__pyx_t_1))) {
+      PyObject* sequence = __pyx_t_1;
+      #if CYTHON_COMPILING_IN_CPYTHON
+      Py_ssize_t size = Py_SIZE(sequence);
+      #else
+      Py_ssize_t size = PySequence_Size(sequence);
+      #endif
+      if (unlikely(size != 2)) {
+        if (size > 2) __Pyx_RaiseTooManyValuesError(2);
+        else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      }
+      #if CYTHON_COMPILING_IN_CPYTHON
+      if (likely(PyTuple_CheckExact(sequence))) {
+        __pyx_t_2 = PyTuple_GET_ITEM(sequence, 0); 
+        __pyx_t_3 = PyTuple_GET_ITEM(sequence, 1); 
+      } else {
+        __pyx_t_2 = PyList_GET_ITEM(sequence, 0); 
+        __pyx_t_3 = PyList_GET_ITEM(sequence, 1); 
+      }
+      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      #else
+      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_3);
+      #endif
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    } else {
+      Py_ssize_t index = -1;
+      __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext;
+      index = 0; __pyx_t_2 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_2)) goto __pyx_L3_unpacking_failed;
+      __Pyx_GOTREF(__pyx_t_2);
+      index = 1; __pyx_t_3 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_3)) goto __pyx_L3_unpacking_failed;
+      __Pyx_GOTREF(__pyx_t_3);
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = NULL;
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      goto __pyx_L4_unpacking_done;
+      __pyx_L3_unpacking_failed:;
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_5 = NULL;
+      if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_L4_unpacking_done:;
+    }
+    __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_3); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_v_first = __pyx_t_6;
+    __pyx_v_second = __pyx_t_7;
+
+    /* "cyfib.pyx":111
+ *     else:
+ *         (first, second) = fib_rec2_cpdef(n - 1)
+ *         return (second, first + second)             # <<<<<<<<<<<<<<
+ * 
+ * cpdef int fib_it_cpdef(int n):
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_second); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 111; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_3 = __Pyx_PyInt_From_int((__pyx_v_first + __pyx_v_second)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 111; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 111; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
+    __Pyx_GIVEREF(__pyx_t_3);
+    PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_3);
+    __pyx_t_1 = 0;
+    __pyx_t_3 = 0;
+    __pyx_r = __pyx_t_2;
+    __pyx_t_2 = 0;
+    goto __pyx_L0;
+    break;
+  }
+
+  /* "cyfib.pyx":103
+ *         return fib_rec_cpdef(n - 1) + fib_rec_cpdef(n - 2)
+ * 
+ * cpdef fib_rec2_cpdef(int n):             # <<<<<<<<<<<<<<
+ *     cdef int first, second
+ *     if n == 0:
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("cyfib.fib_rec2_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_5cyfib_21fib_rec2_cpdef(PyObject *__pyx_self, PyObject *__pyx_arg_n); /*proto*/
+static PyObject *__pyx_pw_5cyfib_21fib_rec2_cpdef(PyObject *__pyx_self, PyObject *__pyx_arg_n) {
+  int __pyx_v_n;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("fib_rec2_cpdef (wrapper)", 0);
+  assert(__pyx_arg_n); {
+    __pyx_v_n = __Pyx_PyInt_As_int(__pyx_arg_n); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 103; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("cyfib.fib_rec2_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_5cyfib_20fib_rec2_cpdef(__pyx_self, ((int)__pyx_v_n));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_5cyfib_20fib_rec2_cpdef(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_n) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("fib_rec2_cpdef", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_5cyfib_fib_rec2_cpdef(__pyx_v_n, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 103; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("cyfib.fib_rec2_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "cyfib.pyx":113
+ *         return (second, first + second)
+ * 
+ * cpdef int fib_it_cpdef(int n):             # <<<<<<<<<<<<<<
+ *     cdef int first, second
+ *     first, second = 0, 1
+ */
+
+static PyObject *__pyx_pw_5cyfib_23fib_it_cpdef(PyObject *__pyx_self, PyObject *__pyx_arg_n); /*proto*/
+static int __pyx_f_5cyfib_fib_it_cpdef(int __pyx_v_n, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  int __pyx_v_first;
+  int __pyx_v_second;
+  CYTHON_UNUSED int __pyx_v_i;
+  int __pyx_r;
+  __Pyx_RefNannyDeclarations
+  int __pyx_t_1;
+  int __pyx_t_2;
+  int __pyx_t_3;
+  int __pyx_t_4;
+  __Pyx_RefNannySetupContext("fib_it_cpdef", 0);
+
+  /* "cyfib.pyx":115
+ * cpdef int fib_it_cpdef(int n):
+ *     cdef int first, second
+ *     first, second = 0, 1             # <<<<<<<<<<<<<<
+ *     for i in range(n):
+ *         first, second = second, first + second
+ */
+  __pyx_t_1 = 0;
+  __pyx_t_2 = 1;
+  __pyx_v_first = __pyx_t_1;
+  __pyx_v_second = __pyx_t_2;
+
+  /* "cyfib.pyx":116
+ *     cdef int first, second
+ *     first, second = 0, 1
+ *     for i in range(n):             # <<<<<<<<<<<<<<
+ *         first, second = second, first + second
+ *     return first
+ */
+  __pyx_t_2 = __pyx_v_n;
+  for (__pyx_t_1 = 0; __pyx_t_1 < __pyx_t_2; __pyx_t_1+=1) {
+    __pyx_v_i = __pyx_t_1;
+
+    /* "cyfib.pyx":117
+ *     first, second = 0, 1
+ *     for i in range(n):
+ *         first, second = second, first + second             # <<<<<<<<<<<<<<
+ *     return first
+ */
+    __pyx_t_3 = __pyx_v_second;
+    __pyx_t_4 = (__pyx_v_first + __pyx_v_second);
+    __pyx_v_first = __pyx_t_3;
+    __pyx_v_second = __pyx_t_4;
+  }
+
+  /* "cyfib.pyx":118
+ *     for i in range(n):
+ *         first, second = second, first + second
+ *     return first             # <<<<<<<<<<<<<<
+ */
+  __pyx_r = __pyx_v_first;
+  goto __pyx_L0;
+
+  /* "cyfib.pyx":113
+ *         return (second, first + second)
+ * 
+ * cpdef int fib_it_cpdef(int n):             # <<<<<<<<<<<<<<
+ *     cdef int first, second
+ *     first, second = 0, 1
+ */
+
+  /* function exit code */
+  __pyx_L0:;
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_5cyfib_23fib_it_cpdef(PyObject *__pyx_self, PyObject *__pyx_arg_n); /*proto*/
+static PyObject *__pyx_pw_5cyfib_23fib_it_cpdef(PyObject *__pyx_self, PyObject *__pyx_arg_n) {
+  int __pyx_v_n;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("fib_it_cpdef (wrapper)", 0);
+  assert(__pyx_arg_n); {
+    __pyx_v_n = __Pyx_PyInt_As_int(__pyx_arg_n); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("cyfib.fib_it_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_5cyfib_22fib_it_cpdef(__pyx_self, ((int)__pyx_v_n));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_5cyfib_22fib_it_cpdef(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_n) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("fib_it_cpdef", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_5cyfib_fib_it_cpdef(__pyx_v_n, 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 113; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("cyfib.fib_it_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
 static PyMethodDef __pyx_methods[] = {
+  {"fib_rec_cpdef", (PyCFunction)__pyx_pw_5cyfib_19fib_rec_cpdef, METH_O, 0},
+  {"fib_rec2_cpdef", (PyCFunction)__pyx_pw_5cyfib_21fib_rec2_cpdef, METH_O, 0},
+  {"fib_it_cpdef", (PyCFunction)__pyx_pw_5cyfib_23fib_it_cpdef, METH_O, 0},
   {0, 0, 0, 0}
 };
 
@@ -2550,49 +3125,71 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "cyfib.pyx":39
+  /* "cyfib.pyx":38
  *     cdef int first, second
  *     if n == 0:
  *         return (0, 0)             # <<<<<<<<<<<<<<
  *     elif n == 1:
  *         return (0, 1)
  */
-  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "cyfib.pyx":41
+  /* "cyfib.pyx":40
  *         return (0, 0)
  *     elif n == 1:
  *         return (0, 1)             # <<<<<<<<<<<<<<
  *     else:
  *         (first, second) = fib_rec2_static(n - 1)
  */
-  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_1); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_1); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "cyfib.pyx":77
+  /* "cyfib.pyx":76
  *     cdef int first, second
  *     if n == 0:
  *         return (0, 0)             # <<<<<<<<<<<<<<
  *     elif n == 1:
  *         return (0, 1)
  */
-  __pyx_tuple__5 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__5 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "cyfib.pyx":79
+  /* "cyfib.pyx":78
  *         return (0, 0)
  *     elif n == 1:
  *         return (0, 1)             # <<<<<<<<<<<<<<
  *     else:
  *         (first, second) = fib_rec2_c(n - 1)
  */
-  __pyx_tuple__6 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_1); if (unlikely(!__pyx_tuple__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 79; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__6 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_1); if (unlikely(!__pyx_tuple__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
+
+  /* "cyfib.pyx":106
+ *     cdef int first, second
+ *     if n == 0:
+ *         return (0, 0)             # <<<<<<<<<<<<<<
+ *     elif n == 1:
+ *         return (0, 1)
+ */
+  __pyx_tuple__7 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__7);
+  __Pyx_GIVEREF(__pyx_tuple__7);
+
+  /* "cyfib.pyx":108
+ *         return (0, 0)
+ *     elif n == 1:
+ *         return (0, 1)             # <<<<<<<<<<<<<<
+ *     else:
+ *         (first, second) = fib_rec2_cpdef(n - 1)
+ */
+  __pyx_tuple__8 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_1); if (unlikely(!__pyx_tuple__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__8);
+  __Pyx_GIVEREF(__pyx_tuple__8);
 
   /* "cyfib.pyx":2
  * #cython
@@ -2600,10 +3197,10 @@ static int __Pyx_InitCachedConstants(void) {
  *     if n == 0:
  *         return 0
  */
-  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_n_s_n); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__7);
-  __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec, 2, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_n_s_n); if (unlikely(!__pyx_tuple__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__9);
+  __Pyx_GIVEREF(__pyx_tuple__9);
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec, 2, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
   /* "cyfib.pyx":10
  *         return fib_rec(n-1) + fib_rec(n-2)
@@ -2612,10 +3209,10 @@ static int __Pyx_InitCachedConstants(void) {
  *     if n == 0:
  *         return (0, 0)
  */
-  __pyx_tuple__9 = PyTuple_Pack(3, __pyx_n_s_n, __pyx_n_s_first, __pyx_n_s_second); if (unlikely(!__pyx_tuple__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__9);
-  __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec2, 10, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__11 = PyTuple_Pack(3, __pyx_n_s_n, __pyx_n_s_first, __pyx_n_s_second); if (unlikely(!__pyx_tuple__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__11);
+  __Pyx_GIVEREF(__pyx_tuple__11);
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec2, 10, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
   /* "cyfib.pyx":19
  *         return (second, first + second)
@@ -2624,82 +3221,82 @@ static int __Pyx_InitCachedConstants(void) {
  *     first, second = 0, 1
  *     for i in range(n):
  */
-  __pyx_tuple__11 = PyTuple_Pack(4, __pyx_n_s_n, __pyx_n_s_first, __pyx_n_s_second, __pyx_n_s_i); if (unlikely(!__pyx_tuple__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__11);
-  __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_it, 19, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__13 = PyTuple_Pack(4, __pyx_n_s_n, __pyx_n_s_first, __pyx_n_s_second, __pyx_n_s_i); if (unlikely(!__pyx_tuple__13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__13);
+  __Pyx_GIVEREF(__pyx_tuple__13);
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_it, 19, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "cyfib.pyx":28
+  /* "cyfib.pyx":27
  * #static cython
  * 
  * def fib_rec_static(int n):             # <<<<<<<<<<<<<<
  *     if n == 0:
  *         return 0
  */
-  __pyx_tuple__13 = PyTuple_Pack(2, __pyx_n_s_n, __pyx_n_s_n); if (unlikely(!__pyx_tuple__13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__13);
-  __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec_static, 28, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__15 = PyTuple_Pack(2, __pyx_n_s_n, __pyx_n_s_n); if (unlikely(!__pyx_tuple__15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__15);
+  __Pyx_GIVEREF(__pyx_tuple__15);
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec_static, 27, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "cyfib.pyx":36
+  /* "cyfib.pyx":35
  *         return fib_rec_static(n - 1) + fib_rec_static(n - 2)
  * 
  * def fib_rec2_static(int n):             # <<<<<<<<<<<<<<
  *     cdef int first, second
  *     if n == 0:
  */
-  __pyx_tuple__15 = PyTuple_Pack(4, __pyx_n_s_n, __pyx_n_s_n, __pyx_n_s_first, __pyx_n_s_second); if (unlikely(!__pyx_tuple__15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__15);
-  __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec2_static, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__17 = PyTuple_Pack(4, __pyx_n_s_n, __pyx_n_s_n, __pyx_n_s_first, __pyx_n_s_second); if (unlikely(!__pyx_tuple__17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__17);
+  __Pyx_GIVEREF(__pyx_tuple__17);
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec2_static, 35, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "cyfib.pyx":46
+  /* "cyfib.pyx":45
  *         return (second, first + second)
  * 
  * def fib_it_static(int n):             # <<<<<<<<<<<<<<
  *     cdef int first, second
  *     first, second = 0, 1
  */
-  __pyx_tuple__17 = PyTuple_Pack(5, __pyx_n_s_n, __pyx_n_s_n, __pyx_n_s_first, __pyx_n_s_second, __pyx_n_s_i); if (unlikely(!__pyx_tuple__17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__17);
-  __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_it_static, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__19 = PyTuple_Pack(5, __pyx_n_s_n, __pyx_n_s_n, __pyx_n_s_first, __pyx_n_s_second, __pyx_n_s_i); if (unlikely(!__pyx_tuple__19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__19);
+  __Pyx_GIVEREF(__pyx_tuple__19);
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_it_static, 45, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "cyfib.pyx":57
+  /* "cyfib.pyx":56
  * ######################
  * 
  * def fib_rec_cdef(n):             # <<<<<<<<<<<<<<
  *     return fib_rec_c(n)
  * 
  */
-  __pyx_tuple__19 = PyTuple_Pack(1, __pyx_n_s_n); if (unlikely(!__pyx_tuple__19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__19);
-  __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec_cdef, 57, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_n_s_n); if (unlikely(!__pyx_tuple__21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__21);
+  __Pyx_GIVEREF(__pyx_tuple__21);
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec_cdef, 56, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "cyfib.pyx":60
+  /* "cyfib.pyx":59
  *     return fib_rec_c(n)
  * 
  * def fib_rec2_cdef(n):             # <<<<<<<<<<<<<<
  *     return fib_rec2_c(n)
  * 
  */
-  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_n_s_n); if (unlikely(!__pyx_tuple__21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__21);
-  __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec2_cdef, 60, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__23 = PyTuple_Pack(1, __pyx_n_s_n); if (unlikely(!__pyx_tuple__23)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__23);
+  __Pyx_GIVEREF(__pyx_tuple__23);
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_rec2_cdef, 59, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "cyfib.pyx":63
+  /* "cyfib.pyx":62
  *     return fib_rec2_c(n)
  * 
  * def fib_it_cdef(n):             # <<<<<<<<<<<<<<
  *     return fib_it_c(n)
  * 
  */
-  __pyx_tuple__23 = PyTuple_Pack(1, __pyx_n_s_n); if (unlikely(!__pyx_tuple__23)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__23);
-  __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_it_cdef, 63, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__25 = PyTuple_Pack(1, __pyx_n_s_n); if (unlikely(!__pyx_tuple__25)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__25);
+  __Pyx_GIVEREF(__pyx_tuple__25);
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_andreas_workspace_python_c, __pyx_n_s_fib_it_cdef, 62, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2846,76 +3443,76 @@ PyMODINIT_FUNC PyInit_cyfib(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_it, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 19; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cyfib.pyx":28
+  /* "cyfib.pyx":27
  * #static cython
  * 
  * def fib_rec_static(int n):             # <<<<<<<<<<<<<<
  *     if n == 0:
  *         return 0
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_7fib_rec_static, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_7fib_rec_static, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_rec_static, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_rec_static, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cyfib.pyx":36
+  /* "cyfib.pyx":35
  *         return fib_rec_static(n - 1) + fib_rec_static(n - 2)
  * 
  * def fib_rec2_static(int n):             # <<<<<<<<<<<<<<
  *     cdef int first, second
  *     if n == 0:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_9fib_rec2_static, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_9fib_rec2_static, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_rec2_static, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_rec2_static, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cyfib.pyx":46
+  /* "cyfib.pyx":45
  *         return (second, first + second)
  * 
  * def fib_it_static(int n):             # <<<<<<<<<<<<<<
  *     cdef int first, second
  *     first, second = 0, 1
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_11fib_it_static, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_11fib_it_static, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_it_static, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_it_static, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cyfib.pyx":57
+  /* "cyfib.pyx":56
  * ######################
  * 
  * def fib_rec_cdef(n):             # <<<<<<<<<<<<<<
  *     return fib_rec_c(n)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_13fib_rec_cdef, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_13fib_rec_cdef, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_rec_cdef, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_rec_cdef, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cyfib.pyx":60
+  /* "cyfib.pyx":59
  *     return fib_rec_c(n)
  * 
  * def fib_rec2_cdef(n):             # <<<<<<<<<<<<<<
  *     return fib_rec2_c(n)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_15fib_rec2_cdef, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_15fib_rec2_cdef, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_rec2_cdef, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_rec2_cdef, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cyfib.pyx":63
+  /* "cyfib.pyx":62
  *     return fib_rec2_c(n)
  * 
  * def fib_it_cdef(n):             # <<<<<<<<<<<<<<
  *     return fib_it_c(n)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_17fib_it_cdef, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5cyfib_17fib_it_cdef, NULL, __pyx_n_s_cyfib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_it_cdef, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fib_it_cdef, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "cyfib.pyx":1
