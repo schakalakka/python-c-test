@@ -1,8 +1,8 @@
 import time
 
-import cyfib
-import cyfib_static
 import ext_fib
+
+import cyfib
 
 
 def fib_rec(n):
@@ -56,11 +56,11 @@ def pure_cython(n):
 def static_cython(n):
     print("\n######Static Cython#########\n")
     t0 = time.time()
-    cyfib_static.fib_rec(n)
+    cyfib.fib_rec_static(n)
     t1 = time.time()
-    cyfib_static.fib_rec2(n)
+    cyfib.fib_rec2_static(n)
     t2 = time.time()
-    cyfib_static.fib_it(n)
+    cyfib.fib_it_static(n)
     t3 = time.time()
     print('recursive: {}\nrecursive2: {}\niterative: {}'.format(t1 - t0, t2 - t1, t3 - t2))
 
@@ -75,7 +75,7 @@ def c_api(n):
     print('recursive: {}\niterative: {}'.format(t1 - t0, t3 - t1))
 
 
-foo = 45
+foo = 20
 
 pure_python(foo)
 pure_cython(foo)
